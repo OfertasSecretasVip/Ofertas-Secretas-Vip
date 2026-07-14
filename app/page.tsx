@@ -35,13 +35,20 @@ export default function Page() {
       clearTimeout(primeiro)
       clearInterval(intervalo)
     }
-  }, [])
+}, [])
 
-  const handleLeadClick = () => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead")
-    }
+const handleLeadClick = () => {
+  if (typeof window !== "undefined" && window.fbq) {
+    // Evento padrão do Meta
+    window.fbq("track", "Lead")
+
+    // Evento personalizado
+    window.fbq("trackCustom", "EntrouGrupoVIP", {
+      destino: "WhatsApp",
+      grupo: "Ofertas Secretas VIP",
+    })
   }
+}
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-[#0b0b0b] px-4 py-4 font-sans text-gray-200 antialiased">
