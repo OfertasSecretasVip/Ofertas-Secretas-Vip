@@ -43,10 +43,7 @@ const handleLeadClick = () => {
     window.fbq("track", "Lead")
 
     // Evento personalizado
-    window.fbq("trackCustom", "EntrouGrupoVIP", {
-      destino: "WhatsApp",
-      grupo: "Ofertas Secretas VIP",
-    })
+    window.fbq("trackCustom", "EntrouGrupoVIP")
   }
 }
 
