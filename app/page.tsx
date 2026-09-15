@@ -15,10 +15,10 @@ export default function Page() {
   useEffect(() => {
     const ciclo = () => {
       setVisivel(true)
-      setTimeout(() => setVisivel(false), 2800)
+      setTimeout(() => setVisivel(false), 3000)
     }
     const primeiro = setTimeout(ciclo, 500)
-    const intervalo = setInterval(ciclo, 5000)
+    const intervalo = setInterval(ciclo, 5200)
     return () => {
       clearTimeout(primeiro)
       clearInterval(intervalo)
@@ -45,13 +45,6 @@ export default function Page() {
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
           </span>
           <p className="text-[13px] font-medium text-slate-700 sm:text-[14px]">Novos membros entrando no grupo</p>
-        </div>
-
-        <div className="mb-4 flex min-h-11 items-center justify-center gap-2 rounded-full border border-rose-100 bg-white px-5 py-2.5 shadow-sm">
-          <span className="text-[17px]" aria-hidden="true">🔥</span>
-          <p className="text-[13px] text-slate-700 sm:text-[14px]">
-            <span className="font-bold text-rose-500">Vagas limitadas</span> no grupo
-          </p>
         </div>
 
         <section className="w-full overflow-hidden rounded-[26px] border border-rose-100 bg-white px-5 pb-7 pt-6 text-center shadow-[0_14px_40px_rgba(190,24,93,0.07)] sm:px-6">
@@ -99,7 +92,12 @@ export default function Page() {
             ENTRAR NO GRUPO DO WHATSAPP
           </a>
 
-          
+          <div className="mx-auto mt-4 flex w-fit min-h-11 items-center justify-center gap-2 rounded-full border border-rose-100 bg-rose-50/70 px-5 py-2.5 shadow-sm">
+            <span className="text-[17px]" aria-hidden="true">🔥</span>
+            <p className="text-[13.5px] text-slate-700 sm:text-[14px]">
+              <span className="font-bold text-rose-500">Vagas limitadas</span> no grupo
+            </p>
+          </div>
         </section>
 
         <footer className="mt-4 text-center text-[11px] text-slate-400">© 2026 Ofertas Secretas VIP</footer>
