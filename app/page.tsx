@@ -83,7 +83,7 @@ export default function Page() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleLeadClick}
-            className="cta-pulse mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-4 py-[20px] text-[16.5px] font-extrabold text-white shadow-[0_10px_26px_rgba(37,211,102,0.28)] transition-transform duration-150 hover:brightness-95 active:scale-[0.98]"
+            className="cta-pulse mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#16d85f] px-4 py-[20px] text-[16.5px] font-extrabold text-white shadow-[0_12px_32px_rgba(22,216,95,0.42)] ring-2 ring-emerald-300/45 transition-all duration-150 hover:brightness-105 active:scale-[0.98]"
           >
             <svg viewBox="0 0 32 32" fill="currentColor" className="h-6 w-6 shrink-0" aria-hidden="true">
               <path d="M19.11 17.2c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.53-.08 1.59-.65 1.82-1.28.23-.63.23-1.16.16-1.28-.07-.11-.25-.18-.52-.32Z" />
