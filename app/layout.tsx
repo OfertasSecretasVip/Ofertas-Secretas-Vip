@@ -11,14 +11,14 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Grupo VIP - Ofertas Secretas',
+  title: 'Grupo de Ofertas no WhatsApp | Ofertas Secretas VIP',
   description:
-    'Cupons exclusivos e promoções selecionadas antes de serem compartilhadas. Entre no grupo VIP de ofertas secretas.',
+    'Entre gratuitamente no grupo de ofertas no WhatsApp e receba cupons, promoções e achadinhos todos os dias.',
   generator: 'v0.app',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0b0b0b',
+  themeColor: '#fff8fa',
 }
 
 const META_PIXEL_ID = '1546300990621609'
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="bg-[#0b0b0b]">
+    <html lang="pt-BR" className="bg-[#fff8fa]">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">
