@@ -9,21 +9,11 @@ declare global {
   }
 }
 
-const DDDS = ["11", "12", "19", "21", "27", "31", "41", "47", "48", "51", "61", "71", "81"]
-
-function gerarTelefone() {
-  const ddd = DDDS[Math.floor(Math.random() * DDDS.length)]
-  const parte = Math.floor(Math.random() * 9000) + 1000
-  return `+55 ${ddd} 9${parte}-****`
-}
-
 export default function Page() {
   const [visivel, setVisivel] = useState(false)
-  const [telefone, setTelefone] = useState("+55 47 99630-****")
 
   useEffect(() => {
     const ciclo = () => {
-      setTelefone(gerarTelefone())
       setVisivel(true)
       setTimeout(() => setVisivel(false), 2800)
     }
@@ -54,8 +44,13 @@ export default function Page() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
           </span>
-          <p className="text-[13px] text-slate-600 sm:text-[14px]">
-            <span className="font-semibold text-slate-800">{telefone}</span> acabou de entrar no grupo
+          <p className="text-[13px] font-medium text-slate-700 sm:text-[14px]">Novos membros entrando no grupo</p>
+        </div>
+
+        <div className="mb-4 flex min-h-11 items-center justify-center gap-2 rounded-full border border-rose-100 bg-white px-5 py-2.5 shadow-sm">
+          <span className="text-[17px]" aria-hidden="true">🔥</span>
+          <p className="text-[13px] text-slate-700 sm:text-[14px]">
+            <span className="font-bold text-rose-500">Vagas limitadas</span> no grupo
           </p>
         </div>
 
@@ -64,14 +59,14 @@ export default function Page() {
             Grupo gratuito no WhatsApp
           </div>
 
-          <div className="relative mx-auto mb-5 h-[142px] w-[142px] overflow-hidden rounded-full border-[3px] border-white bg-white shadow-[0_4px_16px_rgba(15,23,42,0.13)]">
+          <div className="relative mx-auto mb-6 mt-1 h-[162px] w-[162px] overflow-hidden rounded-full border-[3px] border-white bg-white shadow-[0_4px_16px_rgba(15,23,42,0.13)]">
             <Image
               src="/perfil-ofertas-vip.webp"
               alt="Ofertas Secretas VIP - Grupo de Ofertas no WhatsApp"
               fill
               className="object-cover"
               priority
-              sizes="142px"
+              sizes="162px"
             />
           </div>
 
@@ -95,7 +90,7 @@ export default function Page() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleLeadClick}
-            className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-4 py-[18px] text-[16px] font-extrabold text-white shadow-[0_9px_22px_rgba(37,211,102,0.22)] transition-transform duration-150 hover:brightness-95 active:scale-[0.98]"
+            className="cta-pulse mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-4 py-[20px] text-[16.5px] font-extrabold text-white shadow-[0_10px_26px_rgba(37,211,102,0.28)] transition-transform duration-150 hover:brightness-95 active:scale-[0.98]"
           >
             <svg viewBox="0 0 32 32" fill="currentColor" className="h-6 w-6 shrink-0" aria-hidden="true">
               <path d="M19.11 17.2c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.53-.08 1.59-.65 1.82-1.28.23-.63.23-1.16.16-1.28-.07-.11-.25-.18-.52-.32Z" />

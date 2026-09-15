@@ -163,3 +163,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes cta-soft-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 10px 26px rgba(37,211,102,.28); }
+  50% { transform: scale(1.018); box-shadow: 0 12px 32px rgba(37,211,102,.38); }
+}
+
+.cta-pulse {
+  animation: cta-soft-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-pulse { animation: none; }
+}
